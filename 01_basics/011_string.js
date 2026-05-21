@@ -12,3 +12,7 @@ console.log(s)  // concatination will not modify the string
 console.log(s.replace('a','b'))  // it will replace only first matching character
 console.log(s.replaceAll('a','b')) /// it will replace  all matching character
 console.log(s.split('a'))
+
+
+
+
