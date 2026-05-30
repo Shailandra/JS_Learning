@@ -14,8 +14,67 @@
 </head>
 <body class="bg-black">
     <div>
-        <h1 id="name" class="heading"> DOM Learning on Chai aur Code</h1>
+        <h1 id="title" class="heading"> DOM Learning on Chai aur Code <span style="display:none;">Shailandra and Playwright</span> </h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" id="pwd" style="background-color: red;" placeholder="Enter your password">
+
+        <ul class ='language'>
+            <li>JavaScript</li>
+
+        </ul>
     </div>
 </body>
+<script>
+    // const div = document.createElement('div')
+    // console.log(div);
+    // div.className = 'main'
+    // div.id = Math.round(Math.random()*10+1)
+    // div.setAttribute('title', 'generated title')
+    // div.style.backgroundColor = "green"
+    // div.style.padding = "12px"
+    // //div.innerText = "Shailandra and Playwright"
+    // const addText = document.createTextNode('shailandra and playwright')
+    // div.appendChild(addText)
+    // document.body.appendChild(div)
+
+    //********************************************************************************
+
+    // function addLanguage(language){
+    //     const listItem = document.createElement('li')
+    //     listItem.innerHTML('${language}')
+    //     document.querySelector('.language').appendChild(li);
+    // }
+    // addLanguage('Python')
+    // addLanguage('Java')
+    // addLanguage('Ruby')
+
+    //*********************************************************************************
+
+    function addOptiLanguage(langName)
+    {
+       const li = document.createElement('li')
+       li.appendChild(document.createTextNode(`${langName}`))
+       document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage('Python')
+    addOptiLanguage('Java')
+    addOptiLanguage('Ruby')
+
+    //Edit
+    const secondLanguage = document.querySelector('li:nth-child(2)')
+
+    const newLi = document.createElement('li')
+    newLi.textContent = 'Mojo'
+    secondLanguage.replaceWith(newLi)
+
+    //remove
+    const lastLang =  document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+</script>
 </html>
