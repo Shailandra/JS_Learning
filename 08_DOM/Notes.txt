@@ -10,9 +10,6 @@ document.getElementById('id').innerText
 document.getElementById('id').innerHTML
 document.getElementById('id').textContent
 
-
-
-
 document.getElementById('title').getAttribute('id') //'title'
 
 document.getElementById('title').setAttribute('class','test') 
