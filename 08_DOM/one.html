@@ -26,6 +26,7 @@
             <li>JavaScript</li>
 
         </ul>
+        <div id='clock'></div>
     </div>
 </body>
 <script>
@@ -75,6 +76,14 @@
     const lastLang =  document.querySelector('li:last-child')
     lastLang.remove()
 
+    const clock = document.getElementById('clock')
+
+    setInterval(() => {
+        let date = new Date();
+        clock.innerText = date.toLocaleTimeString();
+
+        
+    }, 1000);
 
 </script>
 </html>
