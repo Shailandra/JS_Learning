@@ -26,7 +26,12 @@ function User(username, loginCount, isLoggedIn)
 
 
 
-const userOne = User("Shaialndra", 12, true)
-console.log(userOne.username);
-console.log(userOne.loginCount);
-console.log(userOne.isLoggedIn);
+const userOne =new User("Shaialndra", 12, true);
+const userTwo =new User("Chai aur Code", 11, false);
+// console.log(userOne.username);
+// console.log(userOne.loginCount);
+// console.log(userOne.isLoggedIn);
+
+console.log(userOne);
+console.log(userTwo);
+
