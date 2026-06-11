@@ -31,16 +31,19 @@ Display the title on the page. */
 //         });
 //     </script>
 
-document.getElementById('searchBtn').addEventListener('click', () => {
-    let id = document.getElementById("postId").textContent();
-    id = parseInt(id);
+document.getElementById("searchBtn").addEventListener("click", async () => {
+    const id = document.getElementById("postId").value;
+    console.log(id)
 
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-        .then(response => response.json)
-        .then(data => {
-            document.getElementById('result').textContent = data.title;
-        }).catch(error => {
-            document.getElementById("result").textContent = error.message;
-        })
-}
-)
+    try {
+        const response = await fetch(
+            `https://jsonplaceholder.typicode.com/posts/${id}`
+        );
+
+        const data = await response.json();
+
+        document.getElementById("result").textContent = data.title;
+    } catch (error) {
+        document.getElementById("result").textContent = error.message;
+    }
+});
